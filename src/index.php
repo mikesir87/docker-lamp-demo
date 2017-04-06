@@ -86,6 +86,14 @@ $groceryResult = $db->query("SELECT * FROM grocery_list");
       </div>
 
     </div>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <hr />
+        Served to you by <?php echo gethostname(); ?>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
