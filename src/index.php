@@ -1,6 +1,6 @@
 <?php
 
-$db = new mysqli("db", "db_user", "secretPassword", "app_db");
+$db = new mysqli("localhost", "root", "password", "app_db");
 $groceryResult = $db->query("SELECT * FROM grocery_list");
 
 
@@ -79,7 +79,7 @@ $groceryResult = $db->query("SELECT * FROM grocery_list");
                 <label class="control-label">Description</label>
                 <textarea class="form-control" name="description"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit!!!!!</button>
             </form>
           </div>
         </div>
