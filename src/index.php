@@ -1,6 +1,8 @@
 <?php
 
-$db = new mysqli("db", "db_user", "secretPassword", "app_db");
+require("db.php");
+
+$db = getDb();
 $groceryResult = $db->query("SELECT * FROM grocery_list");
 
 

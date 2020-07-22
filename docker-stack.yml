@@ -9,3 +9,7 @@ services:
       replicas: 2
   db:
     image: mikesir87/lamp-demo-mysql
+    environment:
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: secretPassword
