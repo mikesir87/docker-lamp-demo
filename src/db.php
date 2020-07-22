@@ -1,9 +1,9 @@
 <?php
 
 function getVar($name, $default) {
-    $file = getenv("$name_FILE");
+    $file = getenv("${name}_FILE");
     if ($file) {
-        return file_get_contents($file);
+        return trim(file_get_contents($file));
     }
     $data = getenv($name);
     return $data ? $data : $default;
