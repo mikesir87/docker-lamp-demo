@@ -11,3 +11,12 @@ services:
       - ./src:/var/www/html
   db:
     build: ./docker/db/
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 8080:80
+    environment:
+      PMA_HOST: mysql
+      PMA_USER: db_user
+      PMA_PASSWORD: secretPassword
