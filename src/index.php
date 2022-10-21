@@ -28,7 +28,7 @@ $groceryResult = $db->query("SELECT * FROM grocery_list");
       <div class="row">
         <div class="col-sm-12">
           <?php if (isset($_GET['error'])) : ?>
-            <div class="alert alert-danger">A description is required to add an item!</div>
+            <div class="alert alert-danger">A description is required to add an item. Please add a description.</div>
           <?php endif; ?>
           <?php if (isset($_GET['success'])) : ?>
             <div class="alert alert-success">Your item has been added successfully!</div>
