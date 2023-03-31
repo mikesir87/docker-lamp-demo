@@ -1,16 +1,16 @@
-version: '3.6'
-
 services:
   app:
     build:
       context: .
-      target: base 
+      target: base
     ports:
       - 80:80
     volumes:
       - ./src:/var/www/html
   db:
     build: ./docker/db/
+    volumes:
+      - mysql-data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin:latest
@@ -20,3 +20,6 @@ services:
       PMA_HOST: db 
       PMA_USER: db_user
       PMA_PASSWORD: secretPassword
+
+volumes:
+  mysql-data:
